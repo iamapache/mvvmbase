@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aleyn.mvvm.base.BaseFragment
 import com.pcl.mvvm.R
 import com.pcl.mvvm.databinding.MeFragmentBinding
+import com.pcl.mvvm.ui.activity.LoginActivity
 import com.pcl.mvvm.ui.detail.DetailActivity
 
 class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>() {
@@ -33,7 +34,11 @@ class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>() {
             }
             startActivity(intent)
         }
+        mBinding.dianji.setOnClickListener {
+            startActivity(Intent(context,LoginActivity::class.java))
+        }
     }
+
 
     override fun lazyLoadData() {
         viewModel.getPopularWeb()
