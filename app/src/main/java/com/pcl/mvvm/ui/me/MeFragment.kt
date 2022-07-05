@@ -29,7 +29,7 @@ class MeFragment : BaseFragment<MeViewModel, MeFragmentBinding>() {
         })
         mAdapter.setOnItemClickListener { _, _, position ->
             val intent = Intent().apply {
-                setClass(activity!!, DetailActivity::class.java)
+                setClass(requireActivity(), DetailActivity::class.java)
                 putExtra("url", (mAdapter.data[position]).link)
             }
             startActivity(intent)

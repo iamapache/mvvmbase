@@ -9,7 +9,7 @@ import me.hgj.jetpackmvvm.callback.databind.StringObservableField
 
 class LoginModel : BaseViewModel() {
     //用户名
-    var username = StringObservableField()
+    var username = StringObservableField("请输入用户名")
 
     //密码(登录注册界面)
     var password = StringObservableField()

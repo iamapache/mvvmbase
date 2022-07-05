@@ -30,7 +30,7 @@ class ProjectViewModel : BaseViewModel() {
             defUI.msgEvent.postValue(Message(0, obj = item))
         }
     }
-    var navTitle = ObservableArrayList<String>()
+    var navTitle = ObservableArrayList<String?>()
     var navData = ObservableArrayList<NavTypeBean>()
     var items = ObservableArrayList<ArticlesBean>()
     var itemBinding = ItemBinding.of<ArticlesBean>(BR.itemBean, R.layout.item_project_list)

@@ -19,7 +19,7 @@ class MeViewModel : BaseViewModel() {
         launchGo({
             val result = homeRepository.getPopularWeb()
             if (result.isSuccess()) {
-                popularWeb.value = result.data
+                popularWeb.value = result.data()
             }
         })
     }

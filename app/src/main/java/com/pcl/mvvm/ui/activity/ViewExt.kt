@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
 import android.view.View
 import android.widget.ImageView
+import com.google.gson.Gson
 import org.jetbrains.annotations.NotNull
 
 /**
@@ -119,4 +120,7 @@ fun Any?.notNull(notNullAction:(value:Any) ->Unit,nullAction1:() ->Unit){
     }else{
         nullAction1.invoke()
     }
+}
+fun Any?.toJson():String{
+    return Gson().toJson(this)
 }
